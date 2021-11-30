@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC_trade</title>
+    <link rel="stylesheet" href="stylse.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="icon" href="btc1.jpg">
+    <!--font awesome link-->
+    <!--header section of page-->
+    <!--signature
+    
+    kkkkkk   kkk  kkk  kkk       kkk  kkkkkkkk  kkk   kkk               
+    kkk kkk  kkk  kkk   kkk     kkk   kkk       kkk  kkk                 
+    kkk  kkk kkk  kkk    kkk   kkk    kkkkkkk   kkkkkk                    
+    kkk   kkkkkk  kkk     kkk kkk     kkk       kkk  kkk
+    kkk    kkkkk  kkk       kkk       kkkkkkkk  kkk   kkk               
+     
+    kkk-->  
+    
+    <div id="header">
+        <ul>
+           <li><a href="#deals">Buy</a></li> 
+           <li><a href="#foot">Contact</a></li> 
+
+        </ul>
+       
+    
+    </div>
+</head>
+<body>
+ 
+   <div id="content">
+<h1 class="cap">
+    Start trading today
+</h1>
+   <div class="container">
+       <div id="text">
+       <h2>Shop According to <br>
+             Your Pockets.</h2><br>
+             <p>Just click on the buy button below to start purchase</p>
+             <button id="btn" onclick="buy()">BUY</button>
+       </div>
+       <div id="img">
+          <img src="btc2.jpg" alt="logo" ">
+       </div>
+   </div>
+   <script>
+       function buy(){
+  alert('you are about to purchase a specifit amount of BTC click ok to proceed');
+  window.open('payment.html')
+}
+   </script>
+   </div>
+   <secion id="deals">  
+    <a href="index.html"><i id="scrollableElement" id="dest" class="fas fa-arrow-circle-up"></i></a>
+    
+        <!--price tag images for amount discount payment place-->
+       <div id="val1">
+           <img src="btc1.jpg" alt="" style="border-radius: 13px;" height="200px">
+           <p>Make a purchase of 100 dollars 
+               <br> worth of BTC and get instant 20% 
+                <br> bouns</p>
+                <button onclick="buy()" class="get">BUY</button>
+            </div>
+       <div id="val2">
+           <img src="btc2.jpg" alt="" style="border-radius: 13px;" >
+        <p>Make a purchase of 200 dollars 
+            <br> worth of BTC and get instant 20% 
+             <br> bouns</p>
+             <button onclick="buy()" class="get">BUY</button>
+       </div>
+       <div id="val3">
+           <img src="btc5.jpg" alt="" style="border-radius: 13px;">
+        <p>Make a purchase of 300 dollars 
+            <br> worth of BTC and get instant 30% 
+             <br> bouns</p>
+             <button onclick="buy()" class="get">BUY</button>
+       </div>
+       <div id="val4">
+
+           <img src="btc8.jpg" alt="" style="border-radius: 13px;">
+        <p>Make a purchase of 500 dollars 
+            <br> worth of BTC and get instant 35% 
+             <br> bouns</p>
+             <button onclick="buy()"class="get">BUY</button>
+       </div>
+   </secion>
+           <!--slide show tag images -->
+       <div id="amt">
+         <div id="conti">
+             <img id="imgx"  src="btc1.jpg" alt="">
+             <img id="imgx"  src="btc2.jpg" alt="">
+             <img id="imgx"  src="btc5.jpg" alt="">
+             <img id="imgx"  src="btc7.jpg" alt="">
+         </div>
+       </div>
+
+
+      <script>
+    //just slide show scripting ;      
+var indexValue = 0;
+function slideshow(){
+  setTimeout(slideshow, 2000)
+  var x;
+  const img = document.querySelectorAll('#imgx');
+  for(x = 0;x < img.length;x++){
+      img[x].style.display = 'none';
+  }
+  indexValue++;
+  if(indexValue > img.length){
+    indexValue = 1;
+  }img[indexValue -1].style.display = 'block';
+}
+slideshow();
+
+
+   
+      </script>
+    <style>
+        /*starting of css
+        this is were the loks and shape or teh webpage is made 
+        contents are head, body and footer*/
+        
+     </style>
+    <!-- footer section , contains a div with an id of foot-->
+</body>
+<section id="foot">
+    <div class="contact">
+      <h1 class="he"><span class="lab">You </span>can contact us on</h1> <br><br>
+     we sell bit coin at a very cheap rate <br>
+     we also give bounse for referals<br>
+      just click on the buy button<br> 
+       
+    </div>
+    <div class="visit">
+        <h1 class="he"><span class="lab">Or </span>visit us on</h1> <br><br>
+        you can visit us on any of our social <br>
+         
+
+    </div>
+    <div class="logo">
+        <i id="fab" class="fab fa-facebook-square" ></i>
+        <i id="fab" class="fab fa-twitter"></i>
+        <i id="fab"  class="far fa-thumbs-up"></i>
+        <i id="fab" class="fas fa-bell"></i>
+    </div>
+</section>
+</div>
+<style>
+       
+       #amt{
+            
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 1px 1px 15px rgba(0,0,0,0,4);
+            
+        }
+        #amt .conti{
+             height: 100%;
+             width: 100%;
+        }
+        #conti img{
+           height: 100%;
+           width: 100%;
+        }
+        #dest{
+            font-size: 3em;
+             
+        }
+         #num{
+           height: 3.5em;
+           width: 24em;
+           border-radius: 17px;
+           text-align: center;
+           margin-left: 39em;
+           border:none ;
+           background: #000;
+           color: aliceblue;
+           margin-top: 3em;
+
+        }
+        #btn1{
+            background: gold;
+            border: none;
+            border-radius: 10px;
+            width: 11em;
+            height: 3em;
+            color: aliceblue;
+            margin-left: 39em;
+   
+        }
+
+        .get{
+            background: gold;
+            border: none;
+            border-radius: 8px;
+            width: 8em;
+            height: 2.5em;
+            color: aliceblue;
+        }
+        #deals{
+            background: #444;
+            display: flex;
+            margin-top: 28.5em;
+           
+        }
+        #deals div{
+            padding: 2em;
+           
+        }
+        #pic{
+            background-image: url(img2.jpg);
+            background-repeat: no-repeat;
+            
+
+        }
+
+        #btn{
+            background: gold;
+            border: none;
+            border-radius: 10px;
+            width: 11em;
+            height: 3em;
+            color: aliceblue;
+
+        }
+        #btn:hover{
+            background: darkgoldenrod;
+        }
+        .container{
+            display: flex;
+            margin-top: 5em;
+        }
+        #img{
+            margin-left: 10em ;
+        }
+        #text{
+            margin-left: 5em;
+            font-size: 2em;
+        }
+        .cap{
+          text-shadow: 3px 3px 3px gold;
+          text-align: center;
+          padding-top: 4em;
+          font-size: 3em;
+          color: #333;
+        }
+        /*body contains all body properties including the content div....*/
+        body{
+            background: #333;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #content{
+            background-image: url(btc2.jpg);
+            height: 20em;
+            width: 85em;
+        }
+        /*my header properties*/
+        #header{
+            background: gold;
+            height: 65px;
+        }
+        #header ul{
+         
+          display: flex;
+        
+
+        
+
+        }
+        #header ul li{
+           list-style: none;
+           padding: 6px;
+           font-size: 26px;
+           display: block; 
+           margin-top: 19px;
+
+        }
+        #header ul li a{
+           list-style: none;
+             text-decoration: none;
+             color: aliceblue; 
+           
+        }
+        #header ul li:hover{
+          background: goldenrod;
+        }
+        /*footer section css properties*/
+        #footer{
+            background: #111;
+            color: seashell;
+
+        }
+        .lab{
+            color: gold;
+            font-size: 1.5em;
+        }
+        .he{
+            font-size: 2em;
+        }
+        @media(max-width: 800px){
+            #deals{
+                background: #444;
+                display: block;
+                margin-top: 28.5em;
+               
+            }
+            #text{
+                
+                font-size: 1.5em;
+            }
+            .container{
+                display: block;
+               
+            }
+            #img{
+                height: 8em;
+                margin-right: 8em;
+                width: 100px;
+            } 
+             #content{
+                background-image: url(btc2.jpg);
+                height: 20em;
+                width: 29em;
+            }
+        }
+        #foot{
+            display: flex;
+            padding: 15px;
+        }
+        
+        .visit{
+            margin-left: 3em;
+        }
+
+       #fab{
+           color: #fff;
+          font-size: 70px;
+          padding: 10px;
+          border-radius: 10px;
+
+       }
+    
+</style>
+</html>
